@@ -3,7 +3,15 @@
 		<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 	</head>
 	<body>
-		<label for="first_name">Primeiro Nome</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+		<form action="https://webto.test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+<input type=hidden name="oid" value="00D180000009IgK">
+<input type=hidden name="retURL" value="http://">
+
+<input type="hidden" name="debug" value=1>
+<input type="hidden" name="debugEmail" value="daniel.oliveira@sottelli.com">
+
+<label for="first_name">Primeiro Nome</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
 
 <label for="last_name">Sobrenome</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
 
@@ -136,6 +144,6 @@ Cliente:<select  id="00Nf400000V1f3n" name="00Nf400000V1f3n" title="Cliente"><op
 
 <input type="submit" name="submit">
 
-		</form>
+</form>
 	</body>
 </html>
