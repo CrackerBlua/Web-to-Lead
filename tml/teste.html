@@ -1,67 +1,27 @@
 <html>
-	<head></head>
+	<head>
+		<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+	</head>
 	<body>
-		<style type='text/css'>
-	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
-	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
-	}
-</style>
+		<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+		<input type=hidden name="oid" value="00D180000009IgK">
+		<input type=hidden name="retURL" value="https://sotreq.com.br/">
+		<input type="hidden" name="debug" value=1>
+		<input type="hidden" name="debugEmail" value="daniel.oliveira@sottelli.com">   
+		<label for="first_name">Primeiro Nome</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
 
-<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
-<script type='text/javascript'>
-	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+		<label for="last_name">Sobrenome</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
 
-		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
-		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+		<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
 
-		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
-		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+		<label for="company">Empresa</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
 
-		// Settings for Chat
-		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-			// Returns a valid button ID.
-		//};
-		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
-		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+		<label for="city">Cidade</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
 
-		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-		embedded_svc.settings.entryFeature = 'LiveAgent';
+		<label for="state">Estado/província</label><input  id="state" maxlength="20" name="state" size="20" type="text" /><br>
 
-		embedded_svc.init(
-			'https://gruposotreq--hml.my.salesforce.com',
-			'https://hml-teste-bot-community.cs65.force.com',
-			gslbBaseURL,
-			'00D0m000000DTKT',
-			'ChatBOT',
-			{
-				baseLiveAgentContentURL: 'https://c.la1-c1cs-ord.salesforceliveagent.com/content',
-				deploymentId: '5720m00000001aP',
-				buttonId: '5730m00000002sR',
-				baseLiveAgentURL: 'https://d.la1-c1cs-ord.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'ChatBOT',
-				isOfflineSupportEnabled: false
-			}
-		);
-	};
+		<input type="submit" name="submit">
 
-	if (!window.embedded_svc) {
-		var s = document.createElement('script');
-		s.setAttribute('src', 'https://gruposotreq--hml.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-		s.onload = function() {
-			initESW(null);
-		};
-		document.body.appendChild(s);
-	} else {
-		initESW('https://service.force.com');
-	}
-</script>
+		</form>
 	</body>
 </html>
