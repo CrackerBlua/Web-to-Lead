@@ -18,6 +18,13 @@
 <input type="hidden" name="debug" value=1>
 <input type="hidden" name="debugEmail" value="daniel.oliveira@sottelli.com">
 
+<input type="text" id="estado" name="estado" required minlength="4" maxlength="50" size="10">
+			
+<script type='text/javascript'>
+	const estadoValue = document.getElementById("estado").value;
+	document.getElementById("state").value = estadoValue;
+</script>
+			
 <!--<label for="first_name">Primeiro Nome</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>-->
 
 <label for="last_name">Nome Completo</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
