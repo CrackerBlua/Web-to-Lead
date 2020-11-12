@@ -3,29 +3,49 @@
 		<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 	</head>
 	<body>
-		<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-<!--  ------------------------------  -->
-<input type=hidden name="oid" value="00D180000009IgK">
+	
+	<fieldset>
+          <legend>Selecting elements</legend>
+          <p>
+             <label>Select list</label>
+             <select id = "myList">
+               <option value = "1">one</option>
+               <option value = "2">two</option>
+               <option value = "3">three</option>
+               <option value = "4">four</option>
+             </select>
+          </p>
+       </fieldset>	
+		
+	
+
+	Nome: <input type="text" id="Nome" name="Nome" required minlength="2" maxlength="50" size="10"><br>
+	Email: <input type="text" id="Nome" name="Nome" required minlength="2" maxlength="50" size="10"><br>
+	Telefone: <input type="text" id="Nome" name="Nome" required minlength="2" maxlength="50" size="10"><br>
+	Cidade: <input type="text" id="Nome" name="Nome" required minlength="2" maxlength="50" size="10"><br>
+	Cidade: <input type="text" id="Empresa" name="Nome" required minlength="2" maxlength="50" size="10"><br>
+	Comentários:<textarea name="description"></textarea><br>
+	
+<!--		<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+  ------------------------------  -->
+<!--<input type=hidden name="oid" value="00D180000009IgK">
 <input type=hidden name="retURL" value="http://">
 <input type=hidden name="lead_source" id="lead_source" value="Site">
 <input type=hidden name="00Nf4000008t6sv" value="Web-To-Lead">
 <input type=hidden name="state" id="state" value="Nulo">
 <input type=hidden name="00Nf4000008tCrl" value=" Cotação Web-To-Lead">
-<!--<input type=hidden name="00Nf4000008t6sv" value="Web-To-Lead">
+<input type=hidden name="00Nf4000008t6sv" value="Web-To-Lead">
 <input type=hidden name="00Nf400000UCG0b" value="UNCO Norte">
-<input type=hidden name="00Nf4000008tCsB" value="Web-To-Lead">-->
-<!---->
+<input type=hidden name="00Nf4000008tCsB" value="Web-To-Lead">
+<!---
 <input type="hidden" name="debug" value=1>
-<input type="hidden" name="debugEmail" value="daniel.oliveira@sottelli.com">
+<input type="hidden" name="debugEmail" value="daniel.oliveira@sottelli.com">-->
+		
+	
+			
 
-<input type="text" id="estado" name="estado" required minlength="2" maxlength="50" size="10">
 			
-<script type='text/javascript'>
-	const estadoValue = document.getElementById("estado").value;
-	document.getElementById("state").value = estadoValue;
-</script>
-			
-<!--<label for="first_name">Primeiro Nome</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>-->
+<!--<label for="first_name">Primeiro Nome</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
 
 <label for="last_name">Nome Completo</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
 
@@ -41,6 +61,6 @@ Comentários:<textarea name="description"></textarea><br>
 
 <input type="submit" name="submit">
 
-</form>
+</form>-->
 	</body>
 </html>
