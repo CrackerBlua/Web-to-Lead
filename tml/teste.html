@@ -31,19 +31,9 @@
 		<script type='text/javascript'> 
 			
 			function myFunction(){
-				document.getElementById("last_name").value = document.getElementById("Nome").value;
-				document.getElementById("email").value = document.getElementById("SiteEmail").value;
-				document.getElementById("phone").value = document.getElementById("Telefone").value;
-				document.getElementById("city").value = document.getElementById("Cidade").value;
-				document.getElementById("company").value = document.getElementById("Empresa").value;
-				document.getElementById("description").value = document.getElementById("Comentarios").value;
-				console.log(document.getElementById("last_name").value);
-				console.log(document.getElementById("email").value);
-				console.log(document.getElementById("phone").value);
-				console.log(document.getElementById("city").value);
-				console.log(document.getElementById("company").value);
-				console.log(document.getElementById("description").value);
-
+				const sfName = document.getElementById("last_name");
+				sfName.value = document.getElementById("Nome").value;
+				console.log(sfName);
 				//document.getElementById("sfForm").submit();
 			}
 		</script>
