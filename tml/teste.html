@@ -31,10 +31,25 @@
 		<script type='text/javascript'> 
 			
 			function myFunction(){
+				const sfName = document.getElementById("last_name");
+				const sfEmail = document.getElementById("email");
+				const sfPhone = document.getElementById("phone");
+				const sfCompany = document.getElementById("company");
+				const sfCity = document.getElementById("city");
 				const sfDescription= document.getElementById("description");
+				sfName.value = document.getElementById("Nome").value;
+				sfEmail.value =  document.getElementById("SiteEmail").value;
+				sfPhone.value = document.getElementById("Telefone").value;
+				sfCompany.value =  document.getElementById("Empresa").value;
+				sfCity.value = document.getElementById("Cidade").value;
 				sfDescription.value =  document.getElementById("Comentarios").value;
+				console.log(sfName.value);
+				console.log(sfEmail.value);
+				console.log(sfPhone.value);
+				console.log(sfCompany.value);
+				console.log(sfCity.value);
 				console.log(sfDescription.value);
-				//document.getElementById("sfForm").submit();
+				document.getElementById("sfForm").submit();
 			}
 		</script>
 	<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" id="sfForm" method="POST">
