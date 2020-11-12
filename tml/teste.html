@@ -19,14 +19,14 @@
 		
 	
 	<form onsubmit="myFunction()">
-	
-	Nome: <input type="text" id="Nome" name="Nome" required minlength="2" maxlength="50" size="10"><br>
-	Email: <input type="text" id="SiteEmail" name="Email" required minlength="2" maxlength="50" size="10"><br>
-	Telefone: <input type="text" id="Telefone" name="Telefone" required minlength="2" maxlength="50" size="10"><br>
-	Cidade: <input type="text" id="Cidade" name="Cidade" required minlength="2" maxlength="50" size="10"><br>
-	Empresa: <input type="text" id="Empresa" name="Empresa" required minlength="2" maxlength="50" size="10"><br>
-	Comentários:<textarea name="Comentarios"></textarea><br>
-	<input type="submit" name="submiter"> 
+
+		Nome: <input type="text" id="Nome" name="Nome" required minlength="2" maxlength="50" size="10"><br>
+		Email: <input type="text" id="SiteEmail" name="Email" required minlength="2" maxlength="50" size="10"><br>
+		Telefone: <input type="text" id="Telefone" name="Telefone" required minlength="2" maxlength="50" size="10"><br>
+		Cidade: <input type="text" id="Cidade" name="Cidade" required minlength="2" maxlength="50" size="10"><br>
+		Empresa: <input type="text" id="Empresa" name="Empresa" required minlength="2" maxlength="50" size="10"><br>
+		Comentários:<textarea name="Comentarios"></textarea><br>
+		<input type="submit" name="submiter"> 
 	</form>
 		<script type='text/javascript'> 
 			function myFunction(){
@@ -36,7 +36,12 @@
 				document.getElementById("city").value = document.getElementById("Cidade").value;
 				document.getElementById("company").value = document.getElementById("Empresa").value;
 				document.getElementById("description").value = document.getElementById("Comentarios").value;
-				
+				console.log(document.getElementById("last_name").value);
+				console.log(document.getElementById("email").value);
+				console.log(document.getElementById("phone").value);
+				console.log(document.getElementById("city").value);
+				console.log(document.getElementById("company").value);
+				console.log(document.getElementById("description").value);
 				document.getElementById("sfForm").submit();
 			}
 		</script>
