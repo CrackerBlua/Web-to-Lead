@@ -32,9 +32,11 @@
 			
 			function myFunction(){
 				const sfName = document.getElementById("last_name");
+				const sfEmail = document.getElementById("email");
 				let message = document.getElementById("Nome").value;
+				sfEmail.value =  document.getElementById("SiteEmail").value;
 				sfName.value = message;
-				console.log(sfName.value);
+				console.log(sfEmail.value);
 				//document.getElementById("sfForm").submit();
 			}
 		</script>
