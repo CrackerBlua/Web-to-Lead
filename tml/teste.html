@@ -18,7 +18,7 @@
        </fieldset>	
 		
 	
-	<form id="siteForm">
+	<form id="siteForm" onSubmit="myFunction()">
 
 		Nome: <input type="text" id="Nome" name="Nome"  minlength="2" maxlength="50" size="10"><br>
 		Email: <input type="text" id="SiteEmail" name="Email"  minlength="2" maxlength="50" size="10"><br>
@@ -30,8 +30,6 @@
 	</form>
 		<script type='text/javascript'> 
 			
-			const formSite = document.getElementById("siteForm");
-			formSite.addEventListener('submit', myFunction);
 			function myFunction(){
 				document.getElementById("last_name").value = document.getElementById("Nome").value;
 				document.getElementById("email").value = document.getElementById("SiteEmail").value;
@@ -45,11 +43,7 @@
 				console.log(document.getElementById("city").value);
 				console.log(document.getElementById("company").value);
 				console.log(document.getElementById("description").value);
-				
-				wait(60000);
-					var c = window.confirm("You like this tutorial?");
-					if (c) alert("Thank you.");
-					else alert("OK, you don't like this.");
+
 				//document.getElementById("sfForm").submit();
 			}
 		</script>
