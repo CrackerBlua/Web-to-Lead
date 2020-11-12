@@ -25,14 +25,15 @@
 		Telefone: <input type="text" id="Telefone" name="Telefone"  minlength="2" maxlength="50" size="10"><br>
 		Cidade: <input type="text" id="Cidade" name="Cidade"  minlength="2" maxlength="50" size="10"><br>
 		Empresa: <input type="text" id="Empresa" name="Empresa"  minlength="2" maxlength="50" size="10"><br>
-		Comentários:<textarea name="Comentarios"></textarea><br>
+		Comentários:<textarea name="Comentarios" id="Comentarios"></textarea><br>
 		<input type="submit" name="submiter"> 
 	</form>
 		<script type='text/javascript'> 
 			
 			function myFunction(){
-				
-				console.log(document.getElementById("description"));
+				const sfDescription= document.getElementById("description");
+				sfDescription.value =  document.getElementById("Comentarios").value;
+				console.log(sfDescription.value);
 				//document.getElementById("sfForm").submit();
 			}
 		</script>
