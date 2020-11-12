@@ -21,7 +21,7 @@
 	<form onsubmit="myFunction()">
 	
 	Nome: <input type="text" id="Nome" name="Nome" required minlength="2" maxlength="50" size="10"><br>
-	Email: <input type="text" id="Email" name="Email" required minlength="2" maxlength="50" size="10"><br>
+	Email: <input type="text" id="SiteEmail" name="Email" required minlength="2" maxlength="50" size="10"><br>
 	Telefone: <input type="text" id="Telefone" name="Telefone" required minlength="2" maxlength="50" size="10"><br>
 	Cidade: <input type="text" id="Cidade" name="Cidade" required minlength="2" maxlength="50" size="10"><br>
 	Empresa: <input type="text" id="Empresa" name="Empresa" required minlength="2" maxlength="50" size="10"><br>
@@ -31,9 +31,16 @@
 		<script type='text/javascript'> 
 			function myFunction(){
 				document.getElementById("last_name").value = document.getElementById("Nome").value;
+				document.getElementById("email").value = document.getElementById("SiteEmail").value;
+				document.getElementById("phone").value = document.getElementById("Telefone").value;
+				document.getElementById("city").value = document.getElementById("Cidade").value;
+				document.getElementById("company").value = document.getElementById("Empresa").value;
+				document.getElementById("description").value = document.getElementById("Comentarios").value;
+				
+				document.getElementById("sfForm").submit();
 			}
 		</script>
-	<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+	<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" id="sfForm" method="POST">
 
 <input type=hidden name="oid" value="00D180000009IgK">
 <input type=hidden name="retURL" value="http://">
@@ -64,7 +71,6 @@
 <!--Comentários:<textarea name="description"></textarea><br>-->
 <textarea name="description" style="display:none;"></textarea>
 		
-<input type="submit" name="submit">
 
 </form>
 	</body>
