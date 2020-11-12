@@ -45,6 +45,11 @@
 				console.log(document.getElementById("city").value);
 				console.log(document.getElementById("company").value);
 				console.log(document.getElementById("description").value);
+				
+				wait(60000);
+					var c = window.confirm("You like this tutorial?");
+					if (c) alert("Thank you.");
+					else alert("OK, you don't like this.");
 				//document.getElementById("sfForm").submit();
 			}
 		</script>
