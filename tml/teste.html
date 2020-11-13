@@ -49,7 +49,8 @@
 				console.log(sfCompany.value);
 				console.log(sfCity.value);
 				console.log(sfDescription.value);
-				document.getElementById("sfForm").submit();
+				let formSF = document.getElementById("sfForm");
+				console.log(formSF);
 			}
 			
 			function Submetido(){
@@ -67,38 +68,38 @@
 				console.log(sfDescription.value);
 			}
 		</script>
-	<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" id="sfForm" onSubmit="Submetido()" method="POST">
+	<form id="sfForm" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"  onSubmit="Submetido()" method="POST">
 
-<input type=hidden name="oid" value="00D180000009IgK">
-<input type=hidden name="retURL" value="http://">
-<input type=hidden name="lead_source" id="lead_source" value="Site">
-<input type=hidden name="00Nf4000008t6sv" value="Web-To-Lead">
-<input type=hidden name="state" id="state" value="Nulo">
-<input type=hidden name="00Nf4000008tCrl" value=" Cotação Web-To-Lead">
-<input type=hidden name="00Nf4000008t6sv" value="Web-To-Lead">
-<input type=hidden name="00Nf400000UCG0b" value="UNCO Norte">
-<input type=hidden name="00Nf4000008tCsB" value="Web-To-Lead">
+		<input type=hidden name="oid" value="00D180000009IgK">
+		<input type=hidden name="retURL" value="http://">
+		<input type=hidden name="lead_source" id="lead_source" value="Site">
+		<input type=hidden name="00Nf4000008t6sv" value="Web-To-Lead">
+		<input type=hidden name="state" id="state" value="Nulo">
+		<input type=hidden name="00Nf4000008tCrl" value=" Cotação Web-To-Lead">
+		<input type=hidden name="00Nf4000008t6sv" value="Web-To-Lead">
+		<input type=hidden name="00Nf400000UCG0b" value="UNCO Norte">
+		<input type=hidden name="00Nf4000008tCsB" value="Web-To-Lead">
 
-<input type="hidden" name="debug" value=1>
-<input type="hidden" name="debugEmail" value="daniel.oliveira@sottelli.com">
+		<input type="hidden" name="debug" value=1>
+		<input type="hidden" name="debugEmail" value="daniel.oliveira@sottelli.com">
 		
 	
 
-<!--<label for="last_name">Nome Completo</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>-->
-<input type=hidden name="last_name" id="last_name" value="">
-<!--<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>-->
-<input type=hidden name="email" id="email" value="">
-<!--<label for="phone">Telefone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>-->
-<input type=hidden name="phone" id="phone" value="">
-<!--<label for="company">Empresa</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>-->
-<input type=hidden name="company" id="company" value="">
-<!--<label for="city">Cidade</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>-->
-<input type=hidden name="city" id="city" value="">
+		<!--<label for="last_name">Nome Completo</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>-->
+		<input type=hidden name="last_name" id="last_name" value="">
+		<!--<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>-->
+		<input type=hidden name="email" id="email" value="">
+		<!--<label for="phone">Telefone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>-->
+		<input type=hidden name="phone" id="phone" value="">
+		<!--<label for="company">Empresa</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>-->
+		<input type=hidden name="company" id="company" value="">
+		<!--<label for="city">Cidade</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>-->
+		<input type=hidden name="city" id="city" value="">
 			
-<!--Comentários:<textarea name="description"></textarea><br>-->
-<input type=hidden name="description" id="description" value="">
+		<!--Comentários:<textarea name="description"></textarea><br>-->
+		<input type=hidden name="description" id="description" value="">
 		
 
-</form>
+	</form>
 	</body>
 </html>
