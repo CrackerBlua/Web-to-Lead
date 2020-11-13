@@ -72,11 +72,17 @@
 				let pickVal = document.getElementById("myList");
 				let result = pickVal.options[pickVal.selectedIndex].value;
 				
-				if(result == '1'){
-					document.getElementById("sfForm").submit();
-				} else if(result == '2') {
-					document.getElementById("sfFormCase").submit();
+				let buttonSF = document.getElementById("formSF");
+				if(buttonSf){
+					if(result == '1'){
+						buttonSF.setAttribute('form', 'formSF');
+						document.getElementById("sfForm").submit();
+					} else {
+						buttonSF.setAttribute('form', 'sfFormCase');
+						document.getElementById("sfFormCase").submit();
+					}
 				}
+				
 				
 			}
 			
@@ -106,7 +112,7 @@
 		Comentários:<textarea name="Comentarios" id="Comentarios" onChange="alteradoCampos()"></textarea><br>
 	</form>
 		
-	<button type="submit" form="sfForm" value="Submit" onclick="confirmInput">Submit</button>
+	<button type="submit" id="formSF" value="Submit" onclick="confirmInput">Submit</button>
 		
 	<form id="sfForm" name="sfForm" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"  onSubmit="Submetido()" method="POST">
 
