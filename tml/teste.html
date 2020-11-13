@@ -74,7 +74,7 @@
 				let pickVal = document.getElementById("myList");
 				let result = pickVal.options[pickVal.selectedIndex].value;
 				
-				let buttonSF = document.getElementById("formSF");
+				let buttonSF = document.getElementById("buttonSF");
 				if(buttonSF){
 					if(result == '1'){
 						buttonSF.setAttribute('form', 'formSF');
@@ -115,7 +115,7 @@
 		Comentários:<textarea name="Comentarios" id="Comentarios" onChange="alteradoCampos()"></textarea><br>
 	</form>
 		
-	<button type="submit" id="formSF" value="Submit" onclick="confirmInput">Submit</button>
+	<button type="submit" id="buttonSF" value="Submit" onclick="confirmInput">Submit</button>
 		
 	<form id="sfForm" name="sfForm" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"  onSubmit="Submetido()" method="POST">
 
