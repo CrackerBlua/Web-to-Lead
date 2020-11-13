@@ -13,6 +13,17 @@
 				const sfCompany = document.querySelectorAll("[id='company']");
 				const sfDescription = document.querySelectorAll("[id='description']");
 				
+				let buttonSF = document.getElementById("formSF");
+				if(buttonSf){
+					if(result == '1'){
+						buttonSF.setAttribute('form', 'formSF');
+						document.getElementById("sfForm").submit();
+					} else {
+						buttonSF.setAttribute('form', 'sfFormCase');
+						document.getElementById("sfFormCase").submit();
+					}
+				}
+				
 				if(result == '1'){
 				
 					const sfName = document.getElementById("last_name");
@@ -72,16 +83,8 @@
 				let pickVal = document.getElementById("myList");
 				let result = pickVal.options[pickVal.selectedIndex].value;
 				
-				let buttonSF = document.getElementById("formSF");
-				if(buttonSf){
-					if(result == '1'){
-						buttonSF.setAttribute('form', 'formSF');
-						document.getElementById("sfForm").submit();
-					} else {
-						buttonSF.setAttribute('form', 'sfFormCase');
-						document.getElementById("sfFormCase").submit();
-					}
-				}
+				
+				
 				
 				
 			}
