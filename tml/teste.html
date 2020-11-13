@@ -51,8 +51,23 @@
 				console.log(sfDescription.value);
 				document.getElementById("sfForm").submit();
 			}
+			
+			function Submetido(){
+				const sfName = document.getElementById("last_name");
+				const sfEmail = document.getElementById("email");
+				const sfPhone = document.getElementById("phone");
+				const sfCompany = document.getElementById("company");
+				const sfCity = document.getElementById("city");
+				const sfDescription= document.getElementById("description");
+				console.log(sfName.value);
+				console.log(sfEmail.value);
+				console.log(sfPhone.value);
+				console.log(sfCompany.value);
+				console.log(sfCity.value);
+				console.log(sfDescription.value);
+			}
 		</script>
-	<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" id="sfForm" method="POST">
+	<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" id="sfForm" onSubmit="Submetido()" method="POST">
 
 <input type=hidden name="oid" value="00D180000009IgK">
 <input type=hidden name="retURL" value="http://">
