@@ -7,7 +7,7 @@
 			function alteradoCampos(){
 			
 				const sfName = document.getElementById("last_name");
-				const sfEmail = document.getElementById("email");
+				const sfEmail = document.getElementsByClassName("emailLead");
 				const sfPhone = document.getElementById("phone");
 				const sfCompany = document.getElementById("company");
 				const sfCity = document.getElementById("city");
@@ -28,7 +28,7 @@
 			
 			function Submetido(){
 				const sfName = document.getElementById("last_name");
-				const sfEmail = document.getElementById("email");
+				const sfEmail = document.getElementsByClassName("emailLead");
 				const sfPhone = document.getElementById("phone");
 				const sfCompany = document.getElementById("company");
 				const sfCity = document.getElementById("city");
@@ -93,7 +93,7 @@
 		<!--<label for="last_name">Nome Completo</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>-->
 		<input type=hidden name="last_name" id="last_name" value="">
 		<!--<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>-->
-		<input type=hidden name="email" id="email" value="">
+		<input type=hidden name="email" id="email" class="emailLead" value="">
 		<!--<label for="phone">Telefone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>-->
 		<input type=hidden name="phone" id="phone" value="">
 		<!--<label for="company">Empresa</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>-->
