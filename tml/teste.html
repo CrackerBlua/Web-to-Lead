@@ -40,6 +40,11 @@
 				console.log(sfCity.value);
 				console.log(sfDescription.value);
 			}
+			
+			function confirmInput(){
+				document.getElementById("sfForm").submit();
+			}
+			
 		</script>
 	</head>
 	<body>
@@ -57,15 +62,13 @@
           </p>
        </fieldset>	
 		
-	
-	<form id="siteForm" onSubmit="myFunction()">
-
-		Nome: <input type="text" id="Nome" name="Nome"  minlength="2" maxlength="50" size="10"><br>
-		Email: <input type="text" id="SiteEmail" name="Email"  minlength="2" maxlength="50" size="10"><br>
-		Telefone: <input type="text" id="Telefone" name="Telefone"  minlength="2" maxlength="50" size="10"><br>
-		Cidade: <input type="text" id="Cidade" name="Cidade"  minlength="2" maxlength="50" size="10"><br>
-		Empresa: <input type="text" id="Empresa" name="Empresa"  minlength="2" maxlength="50" size="10"><br>
-		Comentários:<textarea name="Comentarios" id="Comentarios"></textarea><br>
+	<form id="siteForm" onsubmit="confirmInput()">
+		Nome: <input type="text" id="Nome" name="Nome" onblur="myFunction()"  minlength="2" maxlength="50" size="10"><br>
+		Email: <input type="text" id="SiteEmail" name="Email" onblur="myFunction()" minlength="2" maxlength="50" size="10"><br>
+		Telefone: <input type="text" id="Telefone" name="Telefone" onblur="myFunction()"  minlength="2" maxlength="50" size="10"><br>
+		Cidade: <input type="text" id="Cidade" name="Cidade" onblur="myFunction()" minlength="2" maxlength="50" size="10"><br>
+		Empresa: <input type="text" id="Empresa" name="Empresa" onblur="myFunction()" minlength="2" maxlength="50" size="10"><br>
+		Comentários:<textarea name="Comentarios" id="Comentarios" onChange="myFunction()"></textarea><br>
 		<input type="submit" name="submiter"> 
 	</form>
 		
