@@ -1,33 +1,7 @@
 <html>
 	<head>
 		<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-	</head>
-	<body>
-	
-	<fieldset action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" >
-          <legend>Selecting elements</legend>
-          <p>
-             <label>Select list</label>
-             <select id = "myList">
-               <option value = "1">one</option>
-               <option value = "2">two</option>
-               <option value = "3">three</option>
-               <option value = "4">four</option>
-             </select>
-          </p>
-       </fieldset>	
-		
-	
-	<form id="siteForm" onSubmit="myFunction()">
-
-		Nome: <input type="text" id="Nome" name="Nome"  minlength="2" maxlength="50" size="10"><br>
-		Email: <input type="text" id="SiteEmail" name="Email"  minlength="2" maxlength="50" size="10"><br>
-		Telefone: <input type="text" id="Telefone" name="Telefone"  minlength="2" maxlength="50" size="10"><br>
-		Cidade: <input type="text" id="Cidade" name="Cidade"  minlength="2" maxlength="50" size="10"><br>
-		Empresa: <input type="text" id="Empresa" name="Empresa"  minlength="2" maxlength="50" size="10"><br>
-		Comentários:<textarea name="Comentarios" id="Comentarios"></textarea><br>
-		<input type="submit" name="submiter"> 
-	</form>
+			
 		<script type='text/javascript'> 
 			
 			function myFunction(){
@@ -67,6 +41,34 @@
 				console.log(sfDescription.value);
 			}
 		</script>
+	</head>
+	<body>
+	
+	<fieldset action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" >
+          <legend>Selecting elements</legend>
+          <p>
+             <label>Select list</label>
+             <select id = "myList">
+               <option value = "1">one</option>
+               <option value = "2">two</option>
+               <option value = "3">three</option>
+               <option value = "4">four</option>
+             </select>
+          </p>
+       </fieldset>	
+		
+	
+	<form id="siteForm" onSubmit="myFunction()">
+
+		Nome: <input type="text" id="Nome" name="Nome"  minlength="2" maxlength="50" size="10"><br>
+		Email: <input type="text" id="SiteEmail" name="Email"  minlength="2" maxlength="50" size="10"><br>
+		Telefone: <input type="text" id="Telefone" name="Telefone"  minlength="2" maxlength="50" size="10"><br>
+		Cidade: <input type="text" id="Cidade" name="Cidade"  minlength="2" maxlength="50" size="10"><br>
+		Empresa: <input type="text" id="Empresa" name="Empresa"  minlength="2" maxlength="50" size="10"><br>
+		Comentários:<textarea name="Comentarios" id="Comentarios"></textarea><br>
+		<input type="submit" name="submiter"> 
+	</form>
+		
 	<form id="sfForm" name="sfForm" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"  onSubmit="Submetido()" method="POST">
 
 		<input type=hidden name="oid" value="00D180000009IgK">
