@@ -33,7 +33,7 @@
 					console.log(sfDescription[0].value);
 				
 				} else {
-				
+					console.log(result);
 					const sfName = document.getElementById("00Nf400000O2e0Y");
 					const sfCity = document.getElementById("00Nf400000O1f9K");
 					sfName.value = document.getElementById("Nome").value;
@@ -42,6 +42,12 @@
 					sfCompany[1].value =  document.getElementById("Empresa").value;
 					sfCity.value = document.getElementById("Cidade").value;
 					sfDescription[1].value =  document.getElementById("Comentarios").value;
+					console.log(sfName.value);
+					console.log(sfEmail[1].value);
+					console.log(sfPhone[1].value);
+					console.log(sfCompany[1].value);
+					console.log(sfCity.value);
+					console.log(sfDescription[1].value);
 					
 				}
 				
@@ -68,7 +74,7 @@
 				
 				if(result == '1'){
 					document.getElementById("sfForm").submit();
-				} else {
+				} else if(result == '2') {
 					document.getElementById("sfFormCase").submit();
 				}
 				
