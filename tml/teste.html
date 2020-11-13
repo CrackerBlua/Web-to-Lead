@@ -7,20 +7,41 @@
 			function alteradoCampos(){
 				let pickVal = document.getElementById("myList");
 				let result = pickVal.options[pickVal.selectedIndex].value;
-				console.log(result);
-				console.log(typeof(result));
+				
 				const sfEmail = document.querySelectorAll("[id='email']");
 				const sfPhone = document.querySelectorAll("[id='phone']");
 				const sfCompany = document.querySelectorAll("[id='company']");
 				const sfDescription = document.querySelectorAll("[id='description']");
 				
 				if(result == '1'){
+				
+					const sfName = document.getElementById("last_name");
 					
-					console.log(sfEmail[0].value);
+					const sfCity = document.getElementById("city");
+
+					sfName.value = document.getElementById("Nome").value;
+					sfEmail[0].value =  document.getElementById("SiteEmail").value;
+					sfPhone[0].value = document.getElementById("Telefone").value;
+					sfCompany[0].value =  document.getElementById("Empresa").value;
+					sfCity.value = document.getElementById("Cidade").value;
+					sfDescription[0].value =  document.getElementById("Comentarios").value;
+					console.log(sfName.value);
+					console.log(sfEmail.value);
+					console.log(sfPhone.value);
+					console.log(sfCompany.value);
+					console.log(sfCity.value);
+					console.log(sfDescription.value);
 				
 				} else {
 				
-					console.log(sfEmail[1].value);
+					const sfName = document.getElementById("00Nf400000O2e0Y");
+					const sfCity = document.getElementById("00Nf400000O1f9K");
+					sfName.value = document.getElementById("Nome").value;
+					sfEmail[1].value =  document.getElementById("SiteEmail").value;
+					sfPhone[1].value = document.getElementById("Telefone").value;
+					sfCompany[1].value =  document.getElementById("Empresa").value;
+					sfCity.value = document.getElementById("Cidade").value;
+					sfDescription[1].value =  document.getElementById("Comentarios").value;
 					
 				}
 				
@@ -42,9 +63,10 @@
 			}
 			
 			function confirmInput(){
-				const pickVal = document.getElementById("myList");
+				let pickVal = document.getElementById("myList");
+				let result = pickVal.options[pickVal.selectedIndex].value;
 				
-				if(pickVal.value == '1'){
+				if(result == '1'){
 					document.getElementById("sfForm").submit();
 				} else {
 					document.getElementById("sfFormCase").submit();
@@ -100,7 +122,7 @@
 		<!--<label for="last_name">Nome Completo</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>-->
 		<input type=hidden name="last_name" id="last_name" value="">
 		<!--<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>-->
-		<input type=hidden name="email" id="email" value="daniel.oliveira@sottelli.com">
+		<input type=hidden name="email" id="email" value="">
 		<!--<label for="phone">Telefone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>-->
 		<input type=hidden name="phone" id="phone" value="">
 		<!--<label for="company">Empresa</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>-->
@@ -130,7 +152,7 @@
 		<!--Nome do Cliente:<input  id="00Nf400000O2e0Y" maxlength="255" name="00Nf400000O2e0Y" size="20" type="text" /><br>-->
 		<input type="hidden" id="00Nf400000O2e0Y" name="00Nf400000O2e0Y" value="">
 		<!--Email<input  id="email" maxlength="80" name="email" size="20" type="text" /><br>-->
-		<input type=hidden id="email" name="email" value="rafael.mascaro@sottelli.com">
+		<input type=hidden id="email" name="email" value="daniel.oliveira@sottelli.com">
 		<!--Telefone<input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>-->
 		<input type=hidden id="phone" name="phone" value="">
 		<!--Estado<input id="EstadoWeb__c"  maxlength="2" name="EstadoWeb__c" size="20" type="text"/><br>-->
