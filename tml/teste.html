@@ -4,9 +4,10 @@
 			
 		<script type='text/javascript'> 
 			
-			function myFunction(){
+			function alteradoCampos(){
+			
 				const sfName = document.getElementById("last_name");
-				const sfEmail = document.getElementById("email");
+				const sfEmail = document.getElementById("emailLead");
 				const sfPhone = document.getElementById("phone");
 				const sfCompany = document.getElementById("company");
 				const sfCity = document.getElementById("city");
@@ -27,7 +28,7 @@
 			
 			function Submetido(){
 				const sfName = document.getElementById("last_name");
-				const sfEmail = document.getElementById("email");
+				const sfEmail = document.getElementById("emailLead");
 				const sfPhone = document.getElementById("phone");
 				const sfCompany = document.getElementById("company");
 				const sfCity = document.getElementById("city");
@@ -62,12 +63,12 @@
        </fieldset>	
 		
 	<form id="siteForm" onsubmit="confirmInput()">
-		Nome: <input type="text" id="Nome" name="Nome" onblur="myFunction()"  minlength="2" maxlength="50" size="10"><br>
-		Email: <input type="text" id="SiteEmail" name="Email" onblur="myFunction()" minlength="2" maxlength="50" size="10"><br>
-		Telefone: <input type="text" id="Telefone" name="Telefone" onblur="myFunction()"  minlength="2" maxlength="50" size="10"><br>
-		Cidade: <input type="text" id="Cidade" name="Cidade" onblur="myFunction()" minlength="2" maxlength="50" size="10"><br>
-		Empresa: <input type="text" id="Empresa" name="Empresa" onblur="myFunction()" minlength="2" maxlength="50" size="10"><br>
-		Comentários:<textarea name="Comentarios" id="Comentarios" onChange="myFunction()"></textarea><br>
+		Nome: <input type="text" id="Nome" name="Nome" onblur="alteradoCampos()"  minlength="2" maxlength="50" size="10"><br>
+		Email: <input type="text" id="SiteEmail" name="Email" onblur="alteradoCampos()" minlength="2" maxlength="50" size="10"><br>
+		Telefone: <input type="text" id="Telefone" name="Telefone" onblur="alteradoCampos()"  minlength="2" maxlength="50" size="10"><br>
+		Cidade: <input type="text" id="Cidade" name="Cidade" onblur="alteradoCampos()" minlength="2" maxlength="50" size="10"><br>
+		Empresa: <input type="text" id="Empresa" name="Empresa" onblur="alteradoCampos()" minlength="2" maxlength="50" size="10"><br>
+		Comentários:<textarea name="Comentarios" id="Comentarios" onChange="alteradoCampos()"></textarea><br>
 	</form>
 		
 	<button type="submit" form="sfForm" value="Submit" onclick="confirmInput">Submit</button>
@@ -92,7 +93,7 @@
 		<!--<label for="last_name">Nome Completo</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>-->
 		<input type=hidden name="last_name" id="last_name" value="">
 		<!--<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>-->
-		<input type=hidden name="email" id="email" value="">
+		<input type=hidden name="emailLead" id="emailLead" value="">
 		<!--<label for="phone">Telefone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>-->
 		<input type=hidden name="phone" id="phone" value="">
 		<!--<label for="company">Empresa</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>-->
@@ -105,5 +106,7 @@
 		
 
 	</form>
+	
+	
 	</body>
 </html>
