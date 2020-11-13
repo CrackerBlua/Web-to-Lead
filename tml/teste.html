@@ -5,30 +5,50 @@
 		<script type='text/javascript'> 
 			
 			function alteradoCampos(){
-			
-				const sfName = document.getElementById("last_name");
-				const sfEmail = document.getElementsByClassName("emailLead");
-				const sfPhone = document.getElementById("phone");
-				const sfCompany = document.getElementById("company");
-				const sfCity = document.getElementById("city");
-				const sfDescription= document.getElementById("description");
-				sfName.value = document.getElementById("Nome").value;
-				sfEmail.value =  document.getElementById("SiteEmail").value;
-				sfPhone.value = document.getElementById("Telefone").value;
-				sfCompany.value =  document.getElementById("Empresa").value;
-				sfCity.value = document.getElementById("Cidade").value;
-				sfDescription.value =  document.getElementById("Comentarios").value;
-				console.log(sfName.value);
-				console.log(sfEmail.value);
-				console.log(sfPhone.value);
-				console.log(sfCompany.value);
-				console.log(sfCity.value);
-				console.log(sfDescription.value);
+				const pickVal = document.getElementById("myList");
+				
+				const sfEmail = document.querySelectorAll("[id='email']");
+				const sfPhone = document.querySelectorAll("[id='phone']");
+				const sfCompany = document.querySelectorAll("[id='company']");
+				const sfDescription = document.querySelectorAll("[id='description']");
+				
+				if(pickVal.value == '1'){
+				
+					const sfName = document.getElementById("last_name");
+					
+					const sfCity = document.getElementById("city");
+
+					sfName.value = document.getElementById("Nome").value;
+					sfEmail[0].value =  document.getElementById("SiteEmail").value;
+					sfPhone[0].value = document.getElementById("Telefone").value;
+					sfCompany[0].value =  document.getElementById("Empresa").value;
+					sfCity.value = document.getElementById("Cidade").value;
+					sfDescription[0].value =  document.getElementById("Comentarios").value;
+					console.log(sfName.value);
+					console.log(sfEmail.value);
+					console.log(sfPhone.value);
+					console.log(sfCompany.value);
+					console.log(sfCity.value);
+					console.log(sfDescription.value);
+				
+				} else {
+				
+					const sfName = document.getElementById("00Nf400000O2e0Y");
+					const sfCity = document.getElementById("00Nf400000O1f9K");
+					sfName.value = document.getElementById("Nome").value;
+					sfEmail[1].value =  document.getElementById("SiteEmail").value;
+					sfPhone[1].value = document.getElementById("Telefone").value;
+					sfCompany[1].value =  document.getElementById("Empresa").value;
+					sfCity.value = document.getElementById("Cidade").value;
+					sfDescription[1].value =  document.getElementById("Comentarios").value;
+					
+				}
+				
 			}
 			
 			function Submetido(){
 				const sfName = document.getElementById("last_name");
-				const sfEmail = document.getElementsByClassName("emailLead");
+				const sfEmail = document.getElementById("email");
 				const sfPhone = document.getElementById("phone");
 				const sfCompany = document.getElementById("company");
 				const sfCity = document.getElementById("city");
@@ -42,7 +62,14 @@
 			}
 			
 			function confirmInput(){
-				document.getElementById("sfForm").submit();
+				const pickVal = document.getElementById("myList");
+				
+				if(pickVal.value == '1'){
+					document.getElementById("sfForm").submit();
+				} else {
+					document.getElementById("sfFormCase").submit();
+				}
+				
 			}
 			
 		</script>
@@ -93,7 +120,7 @@
 		<!--<label for="last_name">Nome Completo</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>-->
 		<input type=hidden name="last_name" id="last_name" value="">
 		<!--<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>-->
-		<input type=hidden name="email" id="email" class="emailLead" value="">
+		<input type=hidden name="emailLead" id="emailLead" value="">
 		<!--<label for="phone">Telefone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>-->
 		<input type=hidden name="phone" id="phone" value="">
 		<!--<label for="company">Empresa</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>-->
@@ -107,6 +134,35 @@
 
 	</form>
 	
+	
+	<form id="sfFormCase" action="https://gruposotreq--hml.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+		<input type=hidden name="orgid" value="00D0m000000DTKT">
+		<input type=hidden name="retURL" value="http://">
+		<input type=hidden name="recordType" id="recordType" value="012f4000000Ff2o">
+		<input type="hidden" id="status" name="status" value="Novo">
+		<input type="hidden" id="origin" name="origin" value="WEB-TO-CASE">
+
+		<input type="hidden" name="debug" value=1>
+		<input type="hidden" name="debugEmail" value="daniel.oliveira@sottelli.com">
+
+					
+		<!--Nome do Cliente:<input  id="00Nf400000O2e0Y" maxlength="255" name="00Nf400000O2e0Y" size="20" type="text" /><br>-->
+		<input type="hidden" id="00Nf400000O2e0Y" name="00Nf400000O2e0Y" value="">
+		<!--Email<input  id="email" maxlength="80" name="email" size="20" type="text" /><br>-->
+		<input type=hidden id="email" name="email" value="">
+		<!--Telefone<input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>-->
+		<input type=hidden id="phone" name="phone" value="">
+		<!--Estado<input id="EstadoWeb__c"  maxlength="2" name="EstadoWeb__c" size="20" type="text"/><br>-->
+		<input type=hidden id="00Nf400000O1f9U" name="00Nf400000O1f9U" value="Nulo">
+		<!--Cidade<input  id="CidadeWeb__c" maxlength="255" name="CidadeWeb__c" size="20" type="text" /><br>-->
+		<input type=hidden id="00Nf400000O1f9K" name="00Nf400000O1f9K" value="">
+		<!--Empresa<input  id="company" maxlength="80" name="company" size="20" type="text" /><br>-->
+		<input type=hidden name="company" id="company" value="">
+		<!--Comentários<textarea id="description" maxlength="32000" name="description" type="text" wrap="soft"></textarea><br>-->
+		<input type=hidden name="description" id="description" value="">
+		
+	</form>
 	
 	</body>
 </html>
