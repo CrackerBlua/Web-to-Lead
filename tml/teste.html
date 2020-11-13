@@ -5,15 +5,16 @@
 		<script type='text/javascript'> 
 			
 			function alteradoCampos(){
-				const pickVal = document.getElementById("myList");
-				console.log(pickVal);
-				console.log(typeof(pickVal));
+				let pickVal = document.getElementById("myList");
+				let result = pickVal.options[pickVal.selectedIndex].value;
+				console.log(result);
+				console.log(typeof(result));
 				const sfEmail = document.querySelectorAll("[id='email']");
 				const sfPhone = document.querySelectorAll("[id='phone']");
 				const sfCompany = document.querySelectorAll("[id='company']");
 				const sfDescription = document.querySelectorAll("[id='description']");
 				
-				if(pickVal.value == '1'){
+				if(result == '1'){
 				
 					console.log(sfEmail);
 				
