@@ -68,8 +68,9 @@
 		Cidade: <input type="text" id="Cidade" name="Cidade" onblur="myFunction()" minlength="2" maxlength="50" size="10"><br>
 		Empresa: <input type="text" id="Empresa" name="Empresa" onblur="myFunction()" minlength="2" maxlength="50" size="10"><br>
 		Comentários:<textarea name="Comentarios" id="Comentarios" onChange="myFunction()"></textarea><br>
-		<input type="submit" name="submiter"> 
 	</form>
+		
+	<button type="submit" form="siteForm" value="Submit" onclick="confirmInput">Submit</button>
 		
 	<form id="sfForm" name="sfForm" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"  onSubmit="Submetido()" method="POST">
 
