@@ -1,168 +1,201 @@
 <html>
 	<head>
 		<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-			
-		<script type='text/javascript'> 
-			
-			function alteradoCampos(){
-				let pickVal = document.getElementById("myList");
-				let result = pickVal.options[pickVal.selectedIndex].value;
-				
-				const sfEmail = document.querySelectorAll("[id='email']");
-				const sfPhone = document.querySelectorAll("[id='phone']");
-				const sfCompany = document.querySelectorAll("[id='company']");
-				const sfDescription = document.querySelectorAll("[id='description']");
-				
-				if(result == '1'){
-				
-					const sfName = document.getElementById("last_name");
-					
-					const sfCity = document.getElementById("city");
-
-					sfName.value = document.getElementById("Nome").value;
-					sfEmail[0].value =  document.getElementById("SiteEmail").value;
-					sfPhone[0].value = document.getElementById("Telefone").value;
-					sfCompany[0].value =  document.getElementById("Empresa").value;
-					sfCity.value = document.getElementById("Cidade").value;
-					sfDescription[0].value =  document.getElementById("Comentarios").value;
-					console.log(sfName.value);
-					console.log(sfEmail[0].value);
-					console.log(sfPhone[0].value);
-					console.log(sfCompany[0].value);
-					console.log(sfCity.value);
-					console.log(sfDescription[0].value);
-				
-				} else {
-				
-					const sfName = document.getElementById("00Nf400000O2e0Y");
-					const sfCity = document.getElementById("00Nf400000O1f9K");
-					sfName.value = document.getElementById("Nome").value;
-					sfEmail[1].value =  document.getElementById("SiteEmail").value;
-					sfPhone[1].value = document.getElementById("Telefone").value;
-					sfCompany[1].value =  document.getElementById("Empresa").value;
-					sfCity.value = document.getElementById("Cidade").value;
-					sfDescription[1].value =  document.getElementById("Comentarios").value;
-					
-				}
-			}
-			
-			function Submetido(){
-				const sfName = document.getElementById("last_name");
-				const sfEmail = document.getElementById("email");
-				const sfPhone = document.getElementById("phone");
-				const sfCompany = document.getElementById("company");
-				const sfCity = document.getElementById("city");
-				const sfDescription= document.getElementById("description");
-				console.log(sfName.value);
-				console.log(sfEmail.value);
-				console.log(sfPhone.value);
-				console.log(sfCompany.value);
-				console.log(sfCity.value);
-				console.log(sfDescription.value);
-			}
-			
-			function confirmInput(){
-				const pickVal = document.getElementById("myList");
-				
-				if(pickVal.value == '1'){
-					document.getElementById("sfForm").submit();
-				} else {
-					document.getElementById("sfFormCase").submit();
-				}
-				
-			}
-			
-		</script>
 	</head>
 	<body>
-	
-	<fieldset action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" >
-          <legend>Selecting elements</legend>
-          <p>
-             <label>Select list</label>
-             <select id = "myList">
-               <option value = "1">one</option>
-               <option value = "2">two</option>
-               <option value = "3">three</option>
-               <option value = "4">four</option>
-             </select>
-          </p>
-       </fieldset>	
-		
-	<form id="siteForm" onsubmit="confirmInput()">
-		Nome: <input type="text" id="Nome" name="Nome" onblur="alteradoCampos()"  minlength="2" maxlength="50" size="10"><br>
-		Email: <input type="text" id="SiteEmail" name="Email" onblur="alteradoCampos()" minlength="2" maxlength="50" size="10"><br>
-		Telefone: <input type="text" id="Telefone" name="Telefone" onblur="alteradoCampos()"  minlength="2" maxlength="50" size="10"><br>
-		Cidade: <input type="text" id="Cidade" name="Cidade" onblur="alteradoCampos()" minlength="2" maxlength="50" size="10"><br>
-		Empresa: <input type="text" id="Empresa" name="Empresa" onblur="alteradoCampos()" minlength="2" maxlength="50" size="10"><br>
-		Comentários:<textarea name="Comentarios" id="Comentarios" onChange="alteradoCampos()"></textarea><br>
-	</form>
-		
-	
-		
-	<form id="sfForm" name="sfForm" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"  onSubmit="Submetido()" method="POST">
+		<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
-		<input type=hidden name="oid" value="00D180000009IgK">
+		<input type=hidden name="oid" value="00D8D0000004Yyr">
 		<input type=hidden name="retURL" value="http://">
-		<input type=hidden name="lead_source" id="lead_source" value="Site">
-		<input type=hidden name="00Nf4000008t6sv" value="Web-To-Lead">
-		<input type=hidden name="state" id="state" value="Nulo">
-		<input type=hidden name="00Nf4000008tCrl" value=" Cotação Web-To-Lead">
-		<input type=hidden name="00Nf4000008t6sv" value="Web-To-Lead">
-		<input type=hidden name="00Nf400000UCG0b" value="UNCO Norte">
-		<input type=hidden name="00Nf4000008tCsB" value="Web-To-Lead">
 
-		<input type="hidden" name="debug" value=1>
-		<input type="hidden" name="debugEmail" value="daniel.oliveira@sottelli.com">
-		
-	
+		<!--  ----------------------------------------------------------------------  -->
+		<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+		<!--  these lines if you wish to test in debug mode.                          -->
+		<!--  <input type="hidden" name="debug" value=1>                              -->
+		<!--  <input type="hidden" name="debugEmail" value="danielo@brq.com">         -->
+		<!--  ----------------------------------------------------------------------  -->
 
-		<!--<label for="last_name">Nome Completo</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>-->
-		<input type=hidden name="last_name" id="last_name" value="">
-		<!--<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>-->
-		<input type=hidden name="email" id="email" value="">
-		<!--<label for="phone">Telefone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>-->
-		<input type=hidden name="phone" id="phone" value="">
-		<!--<label for="company">Empresa</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>-->
-		<input type=hidden name="company" id="company" value="">
-		<!--<label for="city">Cidade</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>-->
-		<input type=hidden name="city" id="city" value="">
-			
-		<!--Comentários:<textarea name="description"></textarea><br>-->
-		<input type=hidden name="description" id="description" value="">
-		
+		<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
 
-	</form>
-	
-	
-	<form id="sfFormCase" action="https://gruposotreq--hml.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+		<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
 
-		<input type=hidden name="orgid" value="00D0m000000DTKT">
-		<input type=hidden name="retURL" value="http://">
-		<input type=hidden name="recordType" id="recordType" value="012f4000000Ff2o">
-		<input type="hidden" id="status" name="status" value="Novo">
-		<input type="hidden" id="origin" name="origin" value="WEB-TO-CASE">
+		<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
 
-		<input type="hidden" name="debug" value=1>
-		<input type="hidden" name="debugEmail" value="daniel.oliveira@sottelli.com">
+		Phone:<input  id="00Nf400000TZcwa" maxlength="50" name="00Nf400000TZcwa" size="20" type="text" /><br>
 
-					
-		<!--Nome do Cliente:<input  id="00Nf400000O2e0Y" maxlength="255" name="00Nf400000O2e0Y" size="20" type="text" /><br>-->
-		<input type="hidden" id="00Nf400000O2e0Y" name="00Nf400000O2e0Y" value="">
-		<!--Email<input  id="email" maxlength="80" name="email" size="20" type="text" /><br>-->
-		<input type=hidden id="email" name="email" value="daniel.oliveira@sottelli.com">
-		<!--Telefone<input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>-->
-		<input type=hidden id="phone" name="phone" value="">
-		<!--Estado<input id="EstadoWeb__c"  maxlength="2" name="EstadoWeb__c" size="20" type="text"/><br>-->
-		<input type=hidden id="00Nf400000O1f9U" name="00Nf400000O1f9U" value="Nulo">
-		<!--Cidade<input  id="CidadeWeb__c" maxlength="255" name="CidadeWeb__c" size="20" type="text" /><br>-->
-		<input type=hidden id="00Nf400000O1f9K" name="00Nf400000O1f9K" value="">
-		<!--Empresa<input  id="company" maxlength="80" name="company" size="20" type="text" /><br>-->
-		<input type=hidden name="company" id="company" value="">
-		<!--Comentários<textarea id="description" maxlength="32000" name="description" type="text" wrap="soft"></textarea><br>-->
-		<input type=hidden name="description" id="description" value="">
-		
-	</form>
-	<button type="submit" form="sfFormCase" value="Submit" onclick="confirmInput">Submit</button>
+		Customer Identification Number:<input  id="00Nf4000009r6jS" maxlength="20" name="00Nf4000009r6jS" size="20" type="text" /><br>
+
+		VIN:<textarea  id="00Nf400000TZWoc" name="00Nf400000TZWoc" type="text" wrap="soft"></textarea><br>
+
+		License Plate:<textarea  id="00Nf400000TZWoh" name="00Nf400000TZWoh" type="text" wrap="soft"></textarea><br>
+
+		<label for="state">State/Province</label><input  id="state" maxlength="20" name="state" size="20" type="text" /><br>
+
+		Vehicle Of Interest:<select  id="00Nf4000009qUgu" name="00Nf4000009qUgu" title="Vehicle Of Interest"><option value="">--None--</option><option value="Frontier">Frontier</option>
+		<option value="Juke">Juke</option>
+		<option value="Kicks">Kicks</option>
+		<option value="Kicks Rock Edition">Kicks Rock Edition</option>
+		<option value="Leaf">Leaf</option>
+		<option value="Murano">Murano</option>
+		<option value="New Frontier">New Frontier</option>
+		<option value="New Kicks">New Kicks</option>
+		<option value="New March">New March</option>
+		<option value="New Navara">New Navara</option>
+		<option value="New Patrol">New Patrol</option>
+		<option value="New Sentra">New Sentra</option>
+		<option value="NEW VERSA">NEW VERSA</option>
+		<option value="New Xtrail">New Xtrail</option>
+		<option value="Note">Note</option>
+		<option value="NP300">NP300</option>
+		<option value="NP300 LE">NP300 LE</option>
+		<option value="Nueva Navara">Nueva Navara</option>
+		<option value="Nueva Qashqai">Nueva Qashqai</option>
+		<option value="Nuevo Sentra">Nuevo Sentra</option>
+		<option value="Nuevo Versa">Nuevo Versa</option>
+		<option value="NV350">NV350</option>
+		<option value="NV350 Escolar">NV350 Escolar</option>
+		<option value="Pathfinder">Pathfinder</option>
+		<option value="Patrol">Patrol</option>
+		<option value="Qashqai">Qashqai</option>
+		<option value="Sentra">Sentra</option>
+		<option value="Uninformed">Uninformed</option>
+		<option value="Urvan">Urvan</option>
+		<option value="V-Drive">V-Drive</option>
+		<option value="Versa">Versa</option>
+		<option value="Versa Drive">Versa Drive</option>
+		<option value="Versa V-Drive">Versa V-Drive</option>
+		<option value="Xtrail">Xtrail</option>
+		<option value="X-Trail">X-Trail</option>
+		</select><br>
+
+		<label for="description">Description</label><textarea name="description"></textarea><br>
+
+		<label for="lead_source">Lead Source</label><select  id="lead_source" name="lead_source"><option value="">--None--</option><option value="INTERNET">INTERNET</option>
+		<option value="MARKETING">MARKETING</option>
+		<option value="CSC">CSC</option>
+		<option value="DEALER">DEALER</option>
+		<option value="CSC PER">CSC PER</option>
+		<option value="DEALER PER">DEALER PER</option>
+		<option value="MARKETING PER">MARKETING PER</option>
+		<option value="LINKEDIN">LINKEDIN</option>
+		<option value="WhatsApp">WhatsApp</option>
+		</select><br>
+
+		Sub Source:<select  id="00Nf4000009qUyf" name="00Nf4000009qUyf" title="Sub Source"><option value="">--None--</option><option value="SOCIAL MEDIA">SOCIAL MEDIA</option>
+		<option value="DBM">DBM</option>
+		<option value="BBDD NISSAN">BBDD NISSAN</option>
+		<option value="EVENTS">EVENTS</option>
+		<option value="PHONE">PHONE</option>
+		<option value="NISSAN SITE">NISSAN SITE</option>
+		<option value="SHOW ROOM">SHOW ROOM</option>
+		<option value="INTERNET">INTERNET</option>
+		<option value="EMAIL">EMAIL</option>
+		<option value="LUN">LUN</option>
+		<option value="FACEBOOK ADS">FACEBOOK ADS</option>
+		<option value="NISSAN SITE SAVING PLAN">NISSAN SITE SAVING PLAN</option>
+		<option value="OTHER MEDIA">OTHER MEDIA</option>
+		<option value="NISSAN WEBSITES">NISSAN WEBSITES</option>
+		<option value="SMS">SMS</option>
+		<option value="Credinissan">Credinissan</option>
+		<option value="MERCADO LIBRE">MERCADO LIBRE</option>
+		<option value="WHATSAPP">WHATSAPP</option>
+		<option value="OTHER">OTHER</option>
+		<option value="Live Chat">Live Chat</option>
+		<option value="Mercadolibre">Mercadolibre</option>
+		<option value="Sitio Nissan">Sitio Nissan</option>
+		</select><br>
+
+		Detail:<select  id="00Nf4000009qV19" name="00Nf4000009qV19" title="Detail"><option value="">--None--</option><option value="Activity">Activity</option>
+		<option value="AFTER SALES">AFTER SALES</option>
+		<option value="CAR NEWS">CAR NEWS</option>
+		<option value="CHATBOT - MESSEGER">CHATBOT - MESSEGER</option>
+		<option value="CHATBOT - MESSEGER TD">CHATBOT - MESSEGER TD</option>
+		<option value="CHATBOT - WHATSAPP - ATENDIMENTO HUMANO">CHATBOT - WHATSAPP - ATENDIMENTO HUMANO</option>
+		<option value="CLIENTING">CLIENTING</option>
+		<option value="DEALER PAGE">DEALER PAGE</option>
+		<option value="DEALERS">DEALERS</option>
+		<option value="EMAIL INBOX">EMAIL INBOX</option>
+		<option value="FACEBOOK">FACEBOOK</option>
+		<option value="FACEBOOK (FACEBOOK)">FACEBOOK (FACEBOOK)</option>
+		<option value="Facebook NPA">Facebook NPA</option>
+		<option value="Facebook XGear">Facebook XGear</option>
+		<option value="FINANCING">FINANCING</option>
+		<option value="Fin de contrato">Fin de contrato</option>
+		<option value="Frontier XGear">Frontier XGear</option>
+		<option value="ICARROS">ICARROS</option>
+		<option value="INCOMING CALL">INCOMING CALL</option>
+		<option value="Incoming message">Incoming message</option>
+		<option value="I WANT A CONTACT">I WANT A CONTACT</option>
+		<option value="Jornal do Carro">Jornal do Carro</option>
+		<option value="Landing">Landing</option>
+		<option value="Landing Nissan">Landing Nissan</option>
+		<option value="LEAD CAPTURE">LEAD CAPTURE</option>
+		<option value="Linkedin">Linkedin</option>
+		<option value="MAILING">MAILING</option>
+		<option value="MAILING/MESSAGING">MAILING/MESSAGING</option>
+		<option value="Mercado Livre">Mercado Livre</option>
+		<option value="MESSAGE RECEIVED">MESSAGE RECEIVED</option>
+		<option value="MORE INFORMATION">MORE INFORMATION</option>
+		<option value="NEW VEHICLE">NEW VEHICLE</option>
+		<option value="NISSAN KICKS">NISSAN KICKS</option>
+		<option value="NISSAN OFFERS">NISSAN OFFERS</option>
+		<option value="OLX">OLX</option>
+		<option value="OPPORTUNITY">OPPORTUNITY</option>
+		<option value="OTHERS">OTHERS</option>
+		<option value="OUTGOING CALL">OUTGOING CALL</option>
+		<option value="PROMOTIONS">PROMOTIONS</option>
+		<option value="SALESFORCE1">SALESFORCE1</option>
+		<option value="SCHEDULE A TEST DRIVE">SCHEDULE A TEST DRIVE</option>
+		<option value="SOCIAL NETWORK">SOCIAL NETWORK</option>
+		<option value="TEST DRIVE">TEST DRIVE</option>
+		<option value="TEST DRIVE (APP)">TEST DRIVE (APP)</option>
+		<option value="USED VEHICLE">USED VEHICLE</option>
+		<option value="WEBMOTORS">WEBMOTORS</option>
+		<option value="WHATSAPP">WHATSAPP</option>
+		</select><br>
+
+		Sub Detail:<select  id="00Nf4000009qV1d" name="00Nf4000009qV1d" title="Sub Detail"><option value="">--None--</option><option value="PROMOTION">PROMOTION</option>
+		<option value="LEAD ADS">LEAD ADS</option>
+		<option value="MAILING">MAILING</option>
+		<option value="LEAD CAPTURE">LEAD CAPTURE</option>
+		<option value="COMERCIAL">COMERCIAL</option>
+		<option value="SCHEDULE">SCHEDULE</option>
+		<option value="MAILING/MESSAGING">MAILING/MESSAGING</option>
+		<option value="PRODUCT PAGE">PRODUCT PAGE</option>
+		<option value="DEALER LANDING">DEALER LANDING</option>
+		<option value="TV/CABLE">TV/CABLE</option>
+		<option value="NEWSPAPERS/MAGAZINES">NEWSPAPERS/MAGAZINES</option>
+		<option value="RADIO">RADIO</option>
+		<option value="INTERNET">INTERNET</option>
+		<option value="PUBLIC WAY">PUBLIC WAY</option>
+		<option value="SPECIFIC VEHICLE PLAN PAGE">SPECIFIC VEHICLE PLAN PAGE</option>
+		<option value="INSTITUTIONAL SITE">INSTITUTIONAL SITE</option>
+		<option value="PROMO">PROMO</option>
+		<option value="MESSENGER FACEBOOK">MESSENGER FACEBOOK</option>
+		<option value="EXTERNAL PARTNERS">EXTERNAL PARTNERS</option>
+		<option value="ORGANICO">ORGANICO</option>
+		<option value="REFERIDO">REFERIDO</option>
+		<option value="OFFERS">OFFERS</option>
+		<option value="TEST DRIVE">TEST DRIVE</option>
+		<option value="FINANCING">FINANCING</option>
+		<option value="REGIONAL-SP">REGIONAL-SP</option>
+		<option value="REGIONAL-CWB">REGIONAL-CWB</option>
+		<option value="DCO">DCO</option>
+		<option value="DIRECT SALE">DIRECT SALE</option>
+		<option value="FLOW1">FLOW1</option>
+		<option value="FLOW2">FLOW2</option>
+		<option value="Leadgen">Leadgen</option>
+		<option value="FRONTIER">FRONTIER</option>
+		<option value="Crossing">Crossing</option>
+		<option value="Clinic">Clinic</option>
+		</select><br>
+
+		Source Campaing ID:<input  id="00N2S0000072Ux3" maxlength="255" name="00N2S0000072Ux3" size="20" type="text" /><br>
+
+		<label for="country">Country</label><input  id="country" maxlength="40" name="country" size="20" type="text" /><br>
+
+		<input type="submit" name="submit">
+
+		</form>
 	</body>
 </html>
